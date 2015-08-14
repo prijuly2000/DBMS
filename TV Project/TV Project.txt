@@ -1,0 +1,1 @@
+check the oracle database through SQL developer for this

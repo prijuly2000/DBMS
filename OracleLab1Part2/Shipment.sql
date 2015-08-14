@@ -1,0 +1,115 @@
+SET FEEDBACK OFF
+PROMPT FILE CREATED BY Pritesh Gandhi
+PROMPT CREATING SHIPMENT TABLE
+PROMPT
+SET TERMOUT OFF
+DROP TABLE Shipment CASCADE CONSTRAINTS PURGE;
+CREATE TABLE Shipment(
+S# NVARCHAR2(4), 
+P# NVARCHAR2(4),
+J# NVARCHAR2(4),
+QTY INT,
+CONSTRAINT pk_shipment PRIMARY KEY(S#,P#,J#)
+);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S1','P1','J1',200);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S1','P1','J4',700);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S2','P3','J1',400);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S2','P3','J2',200);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S2','P3','J3',200);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S2','P3','J4',500);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S2','P3','J5',600);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S2','P3','J6',400);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S2','P3','J7',800);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S2','P5','J2',100);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S3','P3','J1',200);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S3','P4','J2',500);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S4','P6','J3',300);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S4','P6','J7',300);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S5','P2','J2',200);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S5','P2','J4',100);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S5','P5','J5',500);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S5','P5','J7',100);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S5','P6','J2',200);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S5','P1','J4',100);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S5','P3','J4',200);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S5','P4','J4',800);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S5','P5','J4',400);
+
+
+INSERT INTO Shipment (S#,P#,J#,QTY)
+VALUES('S5','P6','J4',500);
+
+COMMIT;
+SET TERMOUT ON
+PROMPT SHIPMENT TABLE CREATED AND POPULATED
+SELECT Count(*) FROM Shipment;
+SET FEEDBACK ON
